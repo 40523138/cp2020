@@ -23,11 +23,110 @@
 BIOS是允許用戶更改設置的程序，而設置本身則存儲在互補金屬氧化物半導體或CMOS中。 CMOS是電池供電的存儲芯片。<br/><img alt="" height="324" src="/images/p2.png" width="432"/><br/><br/></span></pre>
 <p>A computer’s BIOS is the most common example of firmware. Firmware is software on a chip, and is the first software run by the computer when the machine is booted up. The BIOS has several roles, including performing the power-on self-test, which tests and initializes the processor, video card, disk drives, and adapters. The BIOS also includes the low-level “operating system” for the computer, which allows the computer to take input from and give output to the most basic components, including the keyboard, mouse, and disk drives. The BIOS is stored in a ROM (Read-only memory) chip, but can be upgraded through a process call “flashing.”</p>
 <p>While the BIOS is a program that allows the user to make changes to the settings, the settings themselves are stored in the complementary metal-oxide semiconductor, or CMOS. The CMOS is a battery-powered memory chip.</p>
-<pre class="tw-data-text tw-text-large XcVN5d tw-ta" data-placeholder="翻譯" dir="ltr" id="tw-target-text"><span lang="zh-TW">BIOS用於配置通用設置，例如計算機讀取設備的順序。此命令稱為引導命令。<br/>此外，BIOS還用於配置打開和關閉各種輸入/輸出端口的設置，以及各種CPU設置（例如虛擬化和超頻）的配置。
+<h3><span lang="zh-TW">BIOS用於配置通用設置，例如計算機讀取設備的順序。此命令稱為引導命令。<br/>此外，BIOS還用於配置打開和關閉各種輸入/輸出端口的設置，以及各種CPU設置（例如虛擬化和超頻）的配置。 更改BIOS時要非常小心。不正確的設置可能會使您的計算機無法啟動。<br/><img alt="" height="296" src="/images/p3.png" width="440"/><br/></span></h3>
+<h1><span lang="zh-TW">HW2</span></h1>
+<p><span lang="zh-TW"><span>設計一甲</span></span></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import urllib.request
+url = "https://nfulist.herokuapp.com/?semester=1091&amp;courseno=0762"
+cp1a = []
+for line in urllib.request.urlopen(url):
+    cp1a.append(int(line.decode('utf-8').rstrip()))
+print(cp1a)
+print("總共有" + str(len(cp1a)) + " 筆")
+total = len(cp1a)
+for i in range(total):
+    print("http://github.com/" + str(cp1a[i]) + "/cp2020")</pre>
+<p>1. import urllib.request</p>
+<p>    <span class="c1">導入 urllib.request: <a href="https://docs.python.org/3/library/urllib.request.html">https://docs.python.org/3/library/urllib.request.html</a></span></p>
+<p>    並且透過<span class="c1">urllib.request 模組中的 urlopen() 開啟網路 url 連結資料</span></p>
+<p><span class="c1">2. url = "https://nfulist.herokuapp.com/?semester=1091&amp;courseno=0762"</span></p>
+<p><span class="c1">    設定名單的源頭從<a href="https://nfulist.herokuapp.com/?semester=1091&amp;courseno=0762這個網址來">https://nfulist.herokuapp.com/?semester=1091&amp;courseno=0762這個網址來</a></span></p>
+<p><span class="c1">3.cp1a = []</span></p>
+<p><span class="c1">   設定cp1a這個數列</span></p>
+<p><span class="c1">4. for line in urllib.request.urlopen(url):<br/>    cp1a.append(int(line.decode('utf-8').rstrip()))</span></p>
+<p>    透過 urllib.request模組裡的urlopen()取下網際資料但由於資料為binary格式所以必須使用utf-8進行      編碼將它轉換成我們可看得懂的數字</p>
+<p>5. print(cp1a)</p>
+<p>    顯示cp1a , 由於前面有定義數列了所以cp1a的資料將以數列方式呈現</p>
+<p>6. print("總共有" + str(len(cp1a)) + " 筆")</p>
+<p>    顯示 總共有+字串cp1a的資料數+筆</p>
+<p>7. total = len(cp1a)</p>
+<p>    設定total為cp1a資料數</p>
+<p>8. for i in range(total):<br/>    print("http://github.com/" + str(cp1a[i]) + "/cp2020")</p>
+<p>    用迴圈下去跑(total的資料數)相同的次數 </p>
+<p>    並顯示http://github.com/+ cp1a資料裡每個數據 + /cp2020</p>
+<h2><span lang="zh-TW"><span>HW2<br/></span></span></h2>
+<pre><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n"><a class="indexed_symbol local_indexed_symbol" onclick="parent.postMessage({'referent':'.kaggle.usercode.13188380.48153718.shuffle'}, '*')">shuffle </a></span><span class="n"><a class="indexed_symbol local_indexed_symbol" onclick="parent.postMessage({'referent':'.kaggle.usercode.13188380.48153718.shuffle'}, '*')"><span>從隨機導入洗牌</span><br/></a></span> <a class="indexed_symbol local_indexed_symbol">list </a><span><span class="nb"><a class="indexed_symbol local_indexed_symbol">清單</a></span></span><span class="o">=</span> <span class="p">[</span><span class="mi">40523138</span><span class="p">,</span> <span class="mi">40523148</span><span class="p">,</span> <span class="mi">40723217</span><span class="p">,</span> <span class="mi">40728238</span><span class="p">,</span> <span class="mi">40823148</span><span class="p">,</span> <span class="mi">40823152</span><span class="p">,</span> <span class="mi">40923201</span><span class="p">,</span> <span class="mi">40923202</span><span class="p">,</span> <span class="mi">40923203</span><span class="p">,</span> <span class="mi">40923204</span><span class="p">,</span> <span class="mi">40923205</span><span class="p">,<br/></span> <span class="mi">40923206</span><span class="p">,</span> <span class="mi">40923207</span><span class="p">,</span> <span class="mi">40923208</span><span class="p">,</span> <span class="mi">40923209</span><span class="p">,</span> <span class="mi">40923210</span><span class="p">,</span> <span class="mi">40923211</span><span class="p">,</span> <span class="mi">40923212</span><span class="p">,</span> <span class="mi">40923213</span><span class="p">,</span> <span class="mi">40923214</span><span class="p">,</span> <span class="mi">40923216</span><span class="p">,</span> <span class="mi">40923217</span><span class="p">,</span> <span class="mi">40923218</span><span class="p">,<br/></span> <span class="mi">40923219</span><span class="p">,</span> <span class="mi">40923220</span><span class="p">,</span> <span class="mi">40923221</span><span class="p">,</span> <span class="mi">40923223</span><span class="p">,</span> <span class="mi">40923224</span><span class="p">,</span> <span class="mi">40923225</span><span class="p">,</span> <span class="mi">40923226</span><span class="p">,</span> <span class="mi">40923227</span><span class="p">,</span> <span class="mi">40923228</span><span class="p">,</span> <span class="mi">40923229</span><span class="p">,</span> <span class="mi">40923230</span><span class="p">,</span> <span class="mi">40923231</span><span class="p">,<br/></span> <span class="mi">40923232</span><span class="p">,</span> <span class="mi">40923233</span><span class="p">,</span> <span class="mi">40923234</span><span class="p">,</span> <span class="mi">40923235</span><span class="p">,</span> <span class="mi">40923236</span><span class="p">,</span> <span class="mi">40923237</span><span class="p">,</span> <span class="mi">40923238</span><span class="p">,</span> <span class="mi">40923239</span><span class="p">,</span> <span class="mi">40923240</span><span class="p">,</span> <span class="mi">40923241</span><span class="p">,</span> <span class="mi">40923242</span><span class="p">,</span> <span class="mi">40923243</span><span class="p">,<br/></span> <span class="mi">40923244</span><span class="p">,</span> <span class="mi">40923245</span><span class="p">,</span> <span class="mi">40923246</span><span class="p">,</span> <span class="mi">40923247</span><span class="p">,</span> <span class="mi">40923248</span><span class="p">,</span> <span class="mi">40923249</span><span class="p">,</span> <span class="mi">40923250</span><span class="p">,</span> <span class="mi">40923251</span><span class="p">,</span> <span class="mi">40923252</span><span class="p">,</span> <span class="mi">40923253</span><span class="p">]</span> <br/><span class="n"> <a class="indexed_symbol local_indexed_symbol">shuffle</a></span><span class="p">(</span><span class="nb"><a class="indexed_symbol local_indexed_symbol">list</a></span><span class="p">) </span><span>隨機出現（列表）</span><span class="p"><br/></span> <a class="indexed_symbol local_indexed_symbol">step</a> <span class="o">=</span> <span class="mi">11 </span><span><span class="n"><a class="indexed_symbol local_indexed_symbol">數量(人數)</a></span></span><span class="mi"><br/></span> <a class="indexed_symbol local_indexed_symbol">b</a> <span class="o">=</span> <span class="p">[</span><span class="nb"><a class="indexed_symbol local_indexed_symbol">list</a></span><span class="p">[</span><span class="n"><a class="indexed_symbol local_indexed_symbol" style="box-sizing: border-box; color: inherit; text-decoration: none; background-color: transparent; transition: all 0.3s ease 0s; text-rendering: auto; -webkit-font-smoothing: antialiased;">i</a></span><span class="p">:</span><span class="n"><a class="indexed_symbol local_indexed_symbol" style="box-sizing: border-box; color: inherit; text-decoration: none; background-color: transparent; transition: all 0.3s ease 0s; text-rendering: auto; -webkit-font-smoothing: antialiased;">i</a></span><span class="o">+</span><span class="n"><a class="indexed_symbol local_indexed_symbol">step</a></span><span class="p">]</span> <span class="k">for</span> <span class="n"><a class="indexed_symbol local_indexed_symbol" style="box-sizing: border-box; color: inherit; text-decoration: none; background-color: transparent; transition: all 0.3s ease 0s; text-rendering: auto; -webkit-font-smoothing: antialiased;">i</a></span> <span class="ow">in </span><span><span class="n"><a class="indexed_symbol local_indexed_symbol">＃</a></span><span class="n"><a class="indexed_symbol local_indexed_symbol">b</a></span> <span class="o">=</span> <span class="n"><a class="indexed_symbol local_indexed_symbol"></a></span></span><span class="ow"><span>[</span></span><span><span class="nb"><a class="indexed_symbol local_indexed_symbol">清單</a></span></span><span class="ow"><span>[i：i + step]</span></span><span> <span class="k">for</span> <span class="n"><a class="indexed_symbol local_indexed_symbol" style="box-sizing: border-box; color: #3366ff; text-decoration: none; background-color: transparent; transition: all 0.3s ease 0s; text-rendering: auto; -webkit-font-smoothing: antialiased;">i</a></span> <span class="ow">in</span></span><span class="ow"><br/></span> <a class="indexed_symbol global_indexed_symbol">range</a><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb"><a class="indexed_symbol global_indexed_symbol">len</a></span><span class="p">(</span><span class="nb"><a class="indexed_symbol local_indexed_symbol">list</a></span><span class="p">),</span><span class="n"><a class="indexed_symbol local_indexed_symbol">step</a></span><span class="p">)] </span><span><span class="p">範圍</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="p"></span><span class="n"><a class="indexed_symbol local_indexed_symbol">len（清單）</a></span><span class="n"><a class="indexed_symbol local_indexed_symbol">數量</a></span><span class="p">)]</span></span><span><span class="n"><a class="indexed_symbol local_indexed_symbol"></a></span></span><span><span class="n"><a class="indexed_symbol local_indexed_symbol"></a></span></span><span class="p"><span></span><br/></span> <span class="nb"><a class="indexed_symbol global_indexed_symbol" onclick="parent.postMessage({'referent':'.root.indexer-src.typeshed.stdlib.2and3.builtins.print'}, '*')">print</a></span><span class="p">(</span><span class="n"><a class="indexed_symbol local_indexed_symbol" onclick="parent.postMessage({'referent':'.kaggle.usercode.13188380.48153718.b'}, '*')">b</a></span><span class="p">) </span><span><span class="n"><a class="indexed_symbol local_indexed_symbol" onclick="parent.postMessage({'referent':'.kaggle.usercode.13188380.48153718.shuffle'}, '*')">顯示出來</a></span></span><span><span class="n"><a class="indexed_symbol local_indexed_symbol" onclick="parent.postMessage({'referent':'.kaggle.usercode.13188380.48153718.shuffle'}, '*')">（b)</a></span></span><br/><span>import urllib.request </span><span><a class="indexed_symbol local_indexed_symbol" onclick="parent.postMessage({'referent':'.kaggle.usercode.13188380.48153718.shuffle'}, '*')">導入 urllib.request</a></span><br/><span>target_url = "https://nfulist.herokuapp.com/?semester=1091&amp;courseno=0776"</span><br/><span>cp1b=[]</span><br/><span>for line in urllib.request.urlopen(target_url):  </span><span><a class="indexed_symbol local_indexed_symbol" onclick="parent.postMessage({'referent':'.kaggle.usercode.13188380.48153718.shuffle'}, '*')">用於行進 urllib.request.urlopen(target_url):</a></span><br/><span>    cp1b.append(int(line.decode('utf-8').rstrip()))  </span><span>cp1b.附加(line.decode('utf-8').rstrip())</span><span> </span><br/><span>from random import shuffle  </span><span class="n"><a class="indexed_symbol local_indexed_symbol" onclick="parent.postMessage({'referent':'.kaggle.usercode.13188380.48153718.shuffle'}, '*')">從隨機導入洗牌</a></span><br/><span>shuffle(cp1b)  </span><span>隨機出現（cp1b）</span><br/><span>n = 5   </span><span><span class="n"><a class="indexed_symbol local_indexed_symbol" onclick="parent.postMessage({'referent':'.kaggle.usercode.13188380.48153718.shuffle'}, '*')">數量(分組)</a></span></span><br/><span>m = int(len(cp1b)/n) </span><br/><span>list2 = []</span><br/><span>for i in range(0, len(cp1b), m):   </span><span><span class="n"><a class="indexed_symbol local_indexed_symbol" onclick="parent.postMessage({'referent':'.kaggle.usercode.13188380.48153718.shuffle'}, '*')">在範圍內</a></span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span> </span><span class="nb"><a class="indexed_symbol global_indexed_symbol" onclick="parent.postMessage({'referent':'.root.indexer-src.typeshed.stdlib.2and3.builtins.len'}, '*')">len</a></span><span class="p">(cp1b</span><span class="p">),</span><span> </span><span class="n"><a class="indexed_symbol local_indexed_symbol" onclick="parent.postMessage({'referent':'.kaggle.usercode.13188380.48153718.m'}, '*')">m</a></span><span class="p">):</span></span><br/><span>    list2.append(cp1b[i:i+m])   </span><span><span class="n"><a class="indexed_symbol local_indexed_symbol" onclick="parent.postMessage({'referent':'.kaggle.usercode.13188380.48153718.shuffle'}, '*')">清單2.</a></span><span class="n"><a class="indexed_symbol local_indexed_symbol" onclick="parent.postMessage({'referent':'.kaggle.usercode.13188380.48153718.shuffle'}, '*')">附加</a></span><span class="p">(cp1b</span><span class="p">[</span><span class="n"><a class="indexed_symbol local_indexed_symbol" onclick="parent.postMessage({'referent':'.kaggle.usercode.13188380.48153718.i'}, '*')">i</a></span><span class="p">:</span><span class="n"><a class="indexed_symbol local_indexed_symbol" onclick="parent.postMessage({'referent':'.kaggle.usercode.13188380.48153718.i'}, '*')">i</a></span><span class="o">+</span><span class="n"><a class="indexed_symbol local_indexed_symbol" onclick="parent.postMessage({'referent':'.kaggle.usercode.13188380.48153718.m'}, '*')">m</a></span><span class="p">])</span></span><br/><span>print(list2)  </span><span><span class="n"><a class="indexed_symbol local_indexed_symbol" onclick="parent.postMessage({'referent':'.kaggle.usercode.13188380.48153718.shuffle'}, '*')">顯示出來</a></span><span class="n"><a class="indexed_symbol local_indexed_symbol" onclick="parent.postMessage({'referent':'.kaggle.usercode.13188380.48153718.shuffle'}, '*')">（清單2）<br/><br/><br/><br/></a></span></span></pre>
+<h1 class="tw-data-text tw-text-large XcVN5d tw-ta" data-placeholder="翻譯" dir="ltr"><span lang="zh-TW">HW3</span></h1>
+<p>Write a program (function!) that takes a list and returns a new list that contains all the elements of the first list minus all the duplicates.</p>
+<p>編寫一個包含一個列表並返回一個新列表的程序（函數！），該列表包含第一個列表的所有元素減去所有重複項。</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">	# Exercise 13:
+	# Write a function that takes a list and returns a new list that contains 
+	# all the elements of the first list minus duplicates.
+	
 
-更改BIOS時要非常小心。不正確的設置可能會使您的計算機無法啟動。<br/><img alt="" height="296" src="/images/p3.png" width="440"/><br/></span></pre>
-<pre class="tw-data-text tw-text-large XcVN5d tw-ta" data-placeholder="翻譯" dir="ltr" id="tw-target-text"><span lang="zh-TW"> </span></pre><h1>Note</h1>
+	# this one uses a for loop
+	def dedupe_v1(x):
+	  y = []
+	  for i in x:
+	    if i not in y:
+	      y.append(i)
+	  return y
+	
+
+	#this one uses sets
+	def dedupe_v2(x):
+	    return list(set(x))
+	
+
+	a = [1,2,3,4,3,2,1]
+	print a
+	print dedupe_v1(a)
+	print dedupe_v2(a)
+
+</pre>
+<h2 class="tw-data-text tw-text-large XcVN5d tw-ta" data-placeholder="翻譯" dir="ltr"><span lang="zh-TW">HW3</span></h2>
+<p>Write a program (using functions!) that asks the user for a long string containing multiple words. Print back to the user the same string, except with the words in backwards order. For example, say I type the string:</p>
+<p>  My name is Michele</p>
+<p>Then I would see the string:</p>
+<p>  Michele is name My</p>
+<p>shown back to me.</p>
+<p>編寫一個程序（使用函數！），要求用戶提供包含多個單詞的長字符串。向用戶打印相同的字符串，但單詞順序相反。例如，說我鍵入字符串：</p>
+<p> </p>
+<p>  我叫米歇爾</p>
+<p>然後我會看到字符串：</p>
+<p> </p>
+<p>  米歇爾是我的名字</p>
+<p>顯示給我。</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">def reverseWord(w):
+	  return ' '.join(w.split()[::-1])
+</pre>
+<h2><span lang="zh-TW">HW3</span></h2>
+<p>Write a password generator in Python. Be creative with how you generate passwords - strong passwords have a mix of lowercase letters, uppercase letters, numbers, and symbols. The passwords should be random, generating a new password every time the user asks for a new password. Include your run-time code in a main method.</p>
+<p><br/> 用Python編寫密碼生成器。在生成密碼的方式上要有創意-強密碼包含小寫字母，大寫字母，數字和符號。密碼應該是隨機的，每次用戶要求輸入新密碼時都會生成一個新密碼。在主要方法中包括您的運行時代碼。</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># generate a password with length "passlen" with no duplicate characters in the password
+
+
+import random
+
+
+s = "abcdefghijklmnopqrstuvwxyz01234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&amp;*()?"
+passlen = 8
+p =  "".join(random.sample(s,passlen ))
+print p
+</pre>
+<p><span lang="zh-TW"></span></p>
+<h1 class="tw-data-text tw-text-large XcVN5d tw-ta" data-placeholder="翻譯" dir="ltr"><span lang="zh-TW">W7</span></h1>
+<p><span lang="zh-TW"><a href="https://www.kaggle.com/a40523138/cp2020w7/">https://www.kaggle.com/a40523138/cp2020w7/</a> </span></p>
+<h1>Note</h1>
 <p>week 1:  調整作業環境(proxy、git config)</p>
-<p>Week 2 : 使用git clone 下在自己倉儲於近端,並加入git submodule做為網站架構<br/>                git submodule add <a href="https://gothub.com/mdecourse/cmsimde.git">https://gothub.com/mdecourse/cmsimde.git</a> cmsimde<br/>                於倉儲的設定-&gt;github pages-&gt;sourse-&gt;master(root) 建造個人網頁git.io<br/>                *遇到問題:在mde.tw裡面分組的網站連結出現的是https://s40523138.github.io/cp2020/ 但本身網站的網址是https://<span>40523138.github.io/cp2020/</span></p>
+<p>Week 2 : 使用git clone 下在自己倉儲於近端,並加入git submodule做為網站架構<br/>                git submodule add <a href="https://gothub.com/mdecourse/cmsimde.git">https://gothub.com/mdecourse/cmsimde.git</a> cmsimde<br/>                於倉儲的設定-&gt;github pages-&gt;sourse-&gt;master(root) 建造個人網頁git.io<br/>                遇到問題:在mde.tw裡面分組的網站連結出現的是https://s40523138.github.io/cp2020/ 但本身網站的網址是https://<span>40523138.github.io/cp2020/</span></p>
 <p><span>Week3: solve problem(尚未解決) 由HW2解決</span></p>
+<p>week4:問題已成功解決</p>
 <p>week5: 分組</p>
+<p>week7:了解使用kaggle</p>
+<p>week8~10:深入了解HW2以及亂數分組</p>
+<p>week11~14:HW3的翻譯以及演練</p>
+<p>week15~17:將整理內容上傳及評分</p>
+<p></p>
+<h1>心得</h1>
+<p>於學習的途中有遇到許多困難，但上去GITTER上看許多同學的發表以及老師的回答都能成功解決問題</p>

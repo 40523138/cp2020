@@ -133,18 +133,37 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content"> <a href='Develop.html'>Next</a> >> Develop<br /><h1>About</h1>
-<p>此內容管理系統以 <a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> 作為 submodule 運作, 可以選定對應的版本運作, cmsimde 可以持續改版, 不會影響之前設為 submodule, 使用舊版 cmsimde 模組的內容管理相關運作.</p>
-<h4>利用 cmsimde 建立靜態網誌方法:</h4>
-<p>1. 在 github 建立倉儲, git clone 到近端</p>
-<p>2. 參考 <a href="https://github.com/mdecourse/newcms">https://github.com/mdecourse/newcms</a>, 加入除了 cmsimde 目錄外的所有內容</p>
-<p>以 git submodule add <a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> cmsimde</p>
-<p>建立 cmsimde 目錄, 並從 github 取下子模組內容.</p>
-<p>3.在近端維護時, 更換目錄到倉儲中的 cmsimde, 以 python wsgi.py 啟動近端網際伺服器.</p>
-<p>動態內容編輯完成後, 以 generate_pages 轉為靜態內容, 以 git add commit 及 push 將內容推到遠端.</p>
-<p>4. 之後若要以 git clone 取下包含 submodule 的所有內容, 執行:</p>
-<p>git clone --recurse-submodules <a href="https://github.com/mdecourse/newcms.git">https://github.com/mdecourse/newcms.git</a></p>
-<br /> <a href='Develop.html'>Next</a> >> Develop</div>
+    <div id="tipue_search_content">HW1 << <a href='HW1.html'>Previous</a> <a href='HW2-2.html'>Next</a> >> HW2-2<br /><h1>HW2-1</h1>
+<p><span lang="zh-TW"><span>設計一甲</span></span></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import urllib.request
+url = "https://nfulist.herokuapp.com/?semester=1091&amp;courseno=0762"
+cp1a = []
+for line in urllib.request.urlopen(url):
+    cp1a.append(int(line.decode('utf-8').rstrip()))
+print(cp1a)
+print("總共有" + str(len(cp1a)) + " 筆")
+total = len(cp1a)
+for i in range(total):
+    print("http://github.com/" + str(cp1a[i]) + "/cp2020")</pre>
+<p>1. import urllib.request</p>
+<p>    <span class="c1">導入 urllib.request: <a href="https://docs.python.org/3/library/urllib.request.html">https://docs.python.org/3/library/urllib.request.html</a></span></p>
+<p>    並且透過<span class="c1">urllib.request 模組中的 urlopen() 開啟網路 url 連結資料</span></p>
+<p><span class="c1">2. url = "https://nfulist.herokuapp.com/?semester=1091&amp;courseno=0762"</span></p>
+<p><span class="c1">    設定名單的源頭從<a href="https://nfulist.herokuapp.com/?semester=1091&amp;courseno=0762這個網址來">https://nfulist.herokuapp.com/?semester=1091&amp;courseno=0762這個網址來</a></span></p>
+<p><span class="c1">3.cp1a = []</span></p>
+<p><span class="c1">   設定cp1a這個數列</span></p>
+<p><span class="c1">4. for line in urllib.request.urlopen(url):<br/>    cp1a.append(int(line.decode('utf-8').rstrip()))</span></p>
+<p>    透過 urllib.request模組裡的urlopen()取下網際資料但由於資料為binary格式所以必須使用utf-8進行      編碼將它轉換成我們可看得懂的數字</p>
+<p>5. print(cp1a)</p>
+<p>    顯示cp1a , 由於前面有定義數列了所以cp1a的資料將以數列方式呈現</p>
+<p>6. print("總共有" + str(len(cp1a)) + " 筆")</p>
+<p>    顯示 總共有+字串cp1a的資料數+筆</p>
+<p>7. total = len(cp1a)</p>
+<p>    設定total為cp1a資料數</p>
+<p>8. for i in range(total):<br/>    print("http://github.com/" + str(cp1a[i]) + "/cp2020")</p>
+<p>    用迴圈下去跑(total的資料數)相同的次數 </p>
+<p>    並顯示http://github.com/+ cp1a資料裡每個數據 + /cp2020</p>
+<br />HW1 << <a href='HW1.html'>Previous</a> <a href='HW2-2.html'>Next</a> >> HW2-2</div>
         
     <!-- footer -->
       <div class="container">

@@ -133,18 +133,35 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content"> <a href='Develop.html'>Next</a> >> Develop<br /><h1>About</h1>
-<p>此內容管理系統以 <a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> 作為 submodule 運作, 可以選定對應的版本運作, cmsimde 可以持續改版, 不會影響之前設為 submodule, 使用舊版 cmsimde 模組的內容管理相關運作.</p>
-<h4>利用 cmsimde 建立靜態網誌方法:</h4>
-<p>1. 在 github 建立倉儲, git clone 到近端</p>
-<p>2. 參考 <a href="https://github.com/mdecourse/newcms">https://github.com/mdecourse/newcms</a>, 加入除了 cmsimde 目錄外的所有內容</p>
-<p>以 git submodule add <a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> cmsimde</p>
-<p>建立 cmsimde 目錄, 並從 github 取下子模組內容.</p>
-<p>3.在近端維護時, 更換目錄到倉儲中的 cmsimde, 以 python wsgi.py 啟動近端網際伺服器.</p>
-<p>動態內容編輯完成後, 以 generate_pages 轉為靜態內容, 以 git add commit 及 push 將內容推到遠端.</p>
-<p>4. 之後若要以 git clone 取下包含 submodule 的所有內容, 執行:</p>
-<p>git clone --recurse-submodules <a href="https://github.com/mdecourse/newcms.git">https://github.com/mdecourse/newcms.git</a></p>
-<br /> <a href='Develop.html'>Next</a> >> Develop</div>
+    <div id="tipue_search_content">HW2-2 << <a href='HW2-2.html'>Previous</a> <a href='HW3-2.html'>Next</a> >> HW3-2<br /><h1>HW3-1</h1>
+<p>Write a program (function!) that takes a list and returns a new list that contains all the elements of the first list minus all the duplicates.</p>
+<p>編寫一個包含一個列表並返回一個新列表的程序（函數！），該列表包含第一個列表的所有元素減去所有重複項。</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">	# Exercise 13:
+	# Write a function that takes a list and returns a new list that contains 
+	# all the elements of the first list minus duplicates.
+	
+
+	# this one uses a for loop
+	def dedupe_v1(x):
+	  y = []
+	  for i in x:
+	    if i not in y:
+	      y.append(i)
+	  return y
+	
+
+	#this one uses sets
+	def dedupe_v2(x):
+	    return list(set(x))
+	
+
+	a = [1,2,3,4,3,2,1]
+	print a
+	print dedupe_v1(a)
+	print dedupe_v2(a)
+
+</pre>
+<br />HW2-2 << <a href='HW2-2.html'>Previous</a> <a href='HW3-2.html'>Next</a> >> HW3-2</div>
         
     <!-- footer -->
       <div class="container">

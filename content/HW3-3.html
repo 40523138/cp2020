@@ -133,18 +133,22 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content"> <a href='Develop.html'>Next</a> >> Develop<br /><h1>About</h1>
-<p>此內容管理系統以 <a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> 作為 submodule 運作, 可以選定對應的版本運作, cmsimde 可以持續改版, 不會影響之前設為 submodule, 使用舊版 cmsimde 模組的內容管理相關運作.</p>
-<h4>利用 cmsimde 建立靜態網誌方法:</h4>
-<p>1. 在 github 建立倉儲, git clone 到近端</p>
-<p>2. 參考 <a href="https://github.com/mdecourse/newcms">https://github.com/mdecourse/newcms</a>, 加入除了 cmsimde 目錄外的所有內容</p>
-<p>以 git submodule add <a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> cmsimde</p>
-<p>建立 cmsimde 目錄, 並從 github 取下子模組內容.</p>
-<p>3.在近端維護時, 更換目錄到倉儲中的 cmsimde, 以 python wsgi.py 啟動近端網際伺服器.</p>
-<p>動態內容編輯完成後, 以 generate_pages 轉為靜態內容, 以 git add commit 及 push 將內容推到遠端.</p>
-<p>4. 之後若要以 git clone 取下包含 submodule 的所有內容, 執行:</p>
-<p>git clone --recurse-submodules <a href="https://github.com/mdecourse/newcms.git">https://github.com/mdecourse/newcms.git</a></p>
-<br /> <a href='Develop.html'>Next</a> >> Develop</div>
+    <div id="tipue_search_content">HW3-2 << <a href='HW3-2.html'>Previous</a> <a href='W7.html'>Next</a> >> W7<br /><h1>HW3-3</h1>
+<p>Write a password generator in Python. Be creative with how you generate passwords - strong passwords have a mix of lowercase letters, uppercase letters, numbers, and symbols. The passwords should be random, generating a new password every time the user asks for a new password. Include your run-time code in a main method.</p>
+<p><br/> 用Python編寫密碼生成器。在生成密碼的方式上要有創意-強密碼包含小寫字母，大寫字母，數字和符號。密碼應該是隨機的，每次用戶要求輸入新密碼時都會生成一個新密碼。在主要方法中包括您的運行時代碼。</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># generate a password with length "passlen" with no duplicate characters in the password
+
+
+import random
+
+
+s = "abcdefghijklmnopqrstuvwxyz01234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&amp;*()?"
+passlen = 8
+p =  "".join(random.sample(s,passlen ))
+print p
+</pre>
+<p><span lang="zh-TW"></span></p>
+<br />HW3-2 << <a href='HW3-2.html'>Previous</a> <a href='W7.html'>Next</a> >> W7</div>
         
     <!-- footer -->
       <div class="container">

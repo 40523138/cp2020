@@ -1,0 +1,188 @@
+<!DOCTYPE html><html>
+        <head>
+        <title>CMSiMDE</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/magnific-popup.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/jquery-ui.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap-datepicker.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/flaticon/font/flaticon.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/aos.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/style.css">
+        <link rel="shortcut icon" href="./../cmsimde/static/favicons.png">
+        
+        <style type='text/css'>
+            .site-section {
+            background-color: #FFFF;
+            padding: 40px 40px;
+            }
+            body > div > div.dropdown.open {
+                display: block;
+            }
+        </style>
+    
+        <!-- <script src="./../cmsimde/static/jquery.js"></script> -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+        <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/normalize.min.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch_set.js"></script>
+        <script src="tipuesearch_content.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/tipuesearch.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch.js"></script>
+        <script>
+            /* original tipuesearch
+            $(document).ready(function() {
+                 $('#tipue_search_input').tipuesearch();
+            });
+            */
+            // customed doSearch
+            function doSearch() {
+                $('#tipue_search_input').tipuesearch({
+                    newWindow: true, 
+                    minimumLength: 2,
+                    wholeWords: false, // for search 中文
+                });
+            }
+            $(document).ready(doSearch);
+        </script>
+        
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushBash.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDiff.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushHaxe.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushLua.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDart.js"></script>
+<link type="text/css" rel="stylesheet" href="./../cmsimde/static/syntaxhighlighter/css/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+<!-- 暫時不用
+<script src="./../cmsimde/static/fengari-web.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/Cango-13v08-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/CangoAxes-4v01-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/gearUtils-05.js"></script>
+-->
+<!-- for Brython 暫時不用
+<script src="https://scrum-3.github.io/web/brython/brython.js"></script>
+<script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
+-->
+<style>
+img.add_border {
+    border: 3px solid blue;
+}
+</style>
+
+</head>
+<body>
+<div class='container'><nav>
+        
+    <div class="site-wrap">
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    
+            <header class="site-navbar py-4 bg-white" role="banner">
+              <div class="container-fluid">
+                <div class="row align-items-center">
+                <h1>40523138 cp2020</h1>
+                <div class="pl-4">
+                    <form>
+                    <input type="text" placeholder="Search" name="q" id="tipue_search_input" pattern=".{2,}" title="At least 2 characters" required>
+                    </form>
+                </div>
+                  <!-- <div class="col-11 col-xl-2">
+                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">40523138 cp2020</a></h1> 
+                  </div>
+                  -->
+                  <div class="col-12 col-md-10 d-none d-xl-block">
+                    <nav class="site-navigation position-relative text-right" role="navigation">
+    <ul class='site-menu js-clone-nav mr-auto d-none d-lg-block'>
+                        <li class="active has-children"><a href="index.html">Home</a>
+                        <ul class="dropdown">
+                            <li><a href="sitemap.html">Site Map</a></li>
+                            <li><a href="./../reveal/index.html">reveal</a></li>
+                            <li><a href="./../blog/index.html">blog</a></li>
+                        </ul>
+                      </li>
+                     <li class='has-children'><a href='About.html'>About</a><ul class='dropdown'><li><a href='Develop.html'>Develop</a></li></ul><li><a href='HW1.html'>HW1</a><li class='has-children'><a href='HW2-1.html'>HW2-1</a><ul class='dropdown'><li><a href='HW2-2.html'>HW2-2</a></li></ul><li class='has-children'><a href='HW3-1.html'>HW3-1</a><ul class='dropdown'><li><a href='HW3-2.html'>HW3-2</a><li><a href='HW3-3.html'>HW3-3</a></li></ul><li><a href='W7.html'>W7</a><li><a href='Note.html'>Note</a><li><a href='心得.html'>心得</a></li>
+                      </ul>
+                </nav>
+              </div>
+              <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+              </div>
+
+            </div>
+          </div>
+          
+        </header>
+    <div id="tipue_search_content">HW2-1 << <a href='HW2-1.html'>Previous</a> <a href='HW3-1.html'>Next</a> >> HW3-1<br /><h1>HW2-2</h1>
+<pre><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n"><a class="indexed_symbol local_indexed_symbol" onclick="parent.postMessage({'referent':'.kaggle.usercode.13188380.48153718.shuffle'}, '*')">shuffle </a></span><span class="n"><a class="indexed_symbol local_indexed_symbol" onclick="parent.postMessage({'referent':'.kaggle.usercode.13188380.48153718.shuffle'}, '*')"><span>從隨機導入洗牌</span><br/></a></span> <a class="indexed_symbol local_indexed_symbol">list </a><span><span class="nb"><a class="indexed_symbol local_indexed_symbol">清單</a></span></span><span class="o">=</span> <span class="p">[</span><span class="mi">40523138</span><span class="p">,</span> <span class="mi">40523148</span><span class="p">,</span> <span class="mi">40723217</span><span class="p">,</span> <span class="mi">40728238</span><span class="p">,</span> <span class="mi">40823148</span><span class="p">,</span> <span class="mi">40823152</span><span class="p">,</span> <span class="mi">40923201</span><span class="p">,</span> <span class="mi">40923202</span><span class="p">,</span> <span class="mi">40923203</span><span class="p">,</span> <span class="mi">40923204</span><span class="p">,</span> <span class="mi">40923205</span><span class="p">,<br/></span> <span class="mi">40923206</span><span class="p">,</span> <span class="mi">40923207</span><span class="p">,</span> <span class="mi">40923208</span><span class="p">,</span> <span class="mi">40923209</span><span class="p">,</span> <span class="mi">40923210</span><span class="p">,</span> <span class="mi">40923211</span><span class="p">,</span> <span class="mi">40923212</span><span class="p">,</span> <span class="mi">40923213</span><span class="p">,</span> <span class="mi">40923214</span><span class="p">,</span> <span class="mi">40923216</span><span class="p">,</span> <span class="mi">40923217</span><span class="p">,</span> <span class="mi">40923218</span><span class="p">,<br/></span> <span class="mi">40923219</span><span class="p">,</span> <span class="mi">40923220</span><span class="p">,</span> <span class="mi">40923221</span><span class="p">,</span> <span class="mi">40923223</span><span class="p">,</span> <span class="mi">40923224</span><span class="p">,</span> <span class="mi">40923225</span><span class="p">,</span> <span class="mi">40923226</span><span class="p">,</span> <span class="mi">40923227</span><span class="p">,</span> <span class="mi">40923228</span><span class="p">,</span> <span class="mi">40923229</span><span class="p">,</span> <span class="mi">40923230</span><span class="p">,</span> <span class="mi">40923231</span><span class="p">,<br/></span> <span class="mi">40923232</span><span class="p">,</span> <span class="mi">40923233</span><span class="p">,</span> <span class="mi">40923234</span><span class="p">,</span> <span class="mi">40923235</span><span class="p">,</span> <span class="mi">40923236</span><span class="p">,</span> <span class="mi">40923237</span><span class="p">,</span> <span class="mi">40923238</span><span class="p">,</span> <span class="mi">40923239</span><span class="p">,</span> <span class="mi">40923240</span><span class="p">,</span> <span class="mi">40923241</span><span class="p">,</span> <span class="mi">40923242</span><span class="p">,</span> <span class="mi">40923243</span><span class="p">,<br/></span> <span class="mi">40923244</span><span class="p">,</span> <span class="mi">40923245</span><span class="p">,</span> <span class="mi">40923246</span><span class="p">,</span> <span class="mi">40923247</span><span class="p">,</span> <span class="mi">40923248</span><span class="p">,</span> <span class="mi">40923249</span><span class="p">,</span> <span class="mi">40923250</span><span class="p">,</span> <span class="mi">40923251</span><span class="p">,</span> <span class="mi">40923252</span><span class="p">,</span> <span class="mi">40923253</span><span class="p">]</span> <br/><span class="n"> <a class="indexed_symbol local_indexed_symbol">shuffle</a></span><span class="p">(</span><span class="nb"><a class="indexed_symbol local_indexed_symbol">list</a></span><span class="p">) </span><span>隨機出現（列表）</span><span class="p"><br/></span> <a class="indexed_symbol local_indexed_symbol">step</a> <span class="o">=</span> <span class="mi">11 </span><span><span class="n"><a class="indexed_symbol local_indexed_symbol">數量(人數)</a></span></span><span class="mi"><br/></span> <a class="indexed_symbol local_indexed_symbol">b</a> <span class="o">=</span> <span class="p">[</span><span class="nb"><a class="indexed_symbol local_indexed_symbol">list</a></span><span class="p">[</span><span class="n"><a class="indexed_symbol local_indexed_symbol" style="box-sizing: border-box; color: inherit; text-decoration: none; background-color: transparent; transition: all 0.3s ease 0s; text-rendering: auto; -webkit-font-smoothing: antialiased;">i</a></span><span class="p">:</span><span class="n"><a class="indexed_symbol local_indexed_symbol" style="box-sizing: border-box; color: inherit; text-decoration: none; background-color: transparent; transition: all 0.3s ease 0s; text-rendering: auto; -webkit-font-smoothing: antialiased;">i</a></span><span class="o">+</span><span class="n"><a class="indexed_symbol local_indexed_symbol">step</a></span><span class="p">]</span> <span class="k">for</span> <span class="n"><a class="indexed_symbol local_indexed_symbol" style="box-sizing: border-box; color: inherit; text-decoration: none; background-color: transparent; transition: all 0.3s ease 0s; text-rendering: auto; -webkit-font-smoothing: antialiased;">i</a></span> <span class="ow">in </span><span><span class="n"><a class="indexed_symbol local_indexed_symbol">＃</a></span><span class="n"><a class="indexed_symbol local_indexed_symbol">b</a></span> <span class="o">=</span> <span class="n"><a class="indexed_symbol local_indexed_symbol"></a></span></span><span class="ow"><span>[</span></span><span><span class="nb"><a class="indexed_symbol local_indexed_symbol">清單</a></span></span><span class="ow"><span>[i：i + step]</span></span><span> <span class="k">for</span> <span class="n"><a class="indexed_symbol local_indexed_symbol" style="box-sizing: border-box; color: #3366ff; text-decoration: none; background-color: transparent; transition: all 0.3s ease 0s; text-rendering: auto; -webkit-font-smoothing: antialiased;">i</a></span> <span class="ow">in</span></span><span class="ow"><br/></span> <a class="indexed_symbol global_indexed_symbol">range</a><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb"><a class="indexed_symbol global_indexed_symbol">len</a></span><span class="p">(</span><span class="nb"><a class="indexed_symbol local_indexed_symbol">list</a></span><span class="p">),</span><span class="n"><a class="indexed_symbol local_indexed_symbol">step</a></span><span class="p">)] </span><span><span class="p">範圍</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="p"></span><span class="n"><a class="indexed_symbol local_indexed_symbol">len（清單）</a></span><span class="n"><a class="indexed_symbol local_indexed_symbol">數量</a></span><span class="p">)]</span></span><span><span class="n"><a class="indexed_symbol local_indexed_symbol"></a></span></span><span><span class="n"><a class="indexed_symbol local_indexed_symbol"></a></span></span><span class="p"><span></span><br/></span> <span class="nb"><a class="indexed_symbol global_indexed_symbol" onclick="parent.postMessage({'referent':'.root.indexer-src.typeshed.stdlib.2and3.builtins.print'}, '*')">print</a></span><span class="p">(</span><span class="n"><a class="indexed_symbol local_indexed_symbol" onclick="parent.postMessage({'referent':'.kaggle.usercode.13188380.48153718.b'}, '*')">b</a></span><span class="p">) </span><span><span class="n"><a class="indexed_symbol local_indexed_symbol" onclick="parent.postMessage({'referent':'.kaggle.usercode.13188380.48153718.shuffle'}, '*')">顯示出來</a></span></span><span><span class="n"><a class="indexed_symbol local_indexed_symbol" onclick="parent.postMessage({'referent':'.kaggle.usercode.13188380.48153718.shuffle'}, '*')">（b)</a></span></span><br/><span>import urllib.request </span><span><a class="indexed_symbol local_indexed_symbol" onclick="parent.postMessage({'referent':'.kaggle.usercode.13188380.48153718.shuffle'}, '*')">導入 urllib.request</a></span><br/><span>target_url = "https://nfulist.herokuapp.com/?semester=1091&amp;courseno=0776"</span><br/><span>cp1b=[]</span><br/><span>for line in urllib.request.urlopen(target_url):  </span><span><a class="indexed_symbol local_indexed_symbol" onclick="parent.postMessage({'referent':'.kaggle.usercode.13188380.48153718.shuffle'}, '*')">用於行進 urllib.request.urlopen(target_url):</a></span><br/><span>    cp1b.append(int(line.decode('utf-8').rstrip()))  </span><span>cp1b.附加(line.decode('utf-8').rstrip())</span><span> </span><br/><span>from random import shuffle  </span><span class="n"><a class="indexed_symbol local_indexed_symbol" onclick="parent.postMessage({'referent':'.kaggle.usercode.13188380.48153718.shuffle'}, '*')">從隨機導入洗牌</a></span><br/><span>shuffle(cp1b)  </span><span>隨機出現（cp1b）</span><br/><span>n = 5   </span><span><span class="n"><a class="indexed_symbol local_indexed_symbol" onclick="parent.postMessage({'referent':'.kaggle.usercode.13188380.48153718.shuffle'}, '*')">數量(分組)</a></span></span><br/><span>m = int(len(cp1b)/n) </span><br/><span>list2 = []</span><br/><span>for i in range(0, len(cp1b), m):   </span><span><span class="n"><a class="indexed_symbol local_indexed_symbol" onclick="parent.postMessage({'referent':'.kaggle.usercode.13188380.48153718.shuffle'}, '*')">在範圍內</a></span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span> </span><span class="nb"><a class="indexed_symbol global_indexed_symbol" onclick="parent.postMessage({'referent':'.root.indexer-src.typeshed.stdlib.2and3.builtins.len'}, '*')">len</a></span><span class="p">(cp1b</span><span class="p">),</span><span> </span><span class="n"><a class="indexed_symbol local_indexed_symbol" onclick="parent.postMessage({'referent':'.kaggle.usercode.13188380.48153718.m'}, '*')">m</a></span><span class="p">):</span></span><br/><span>    list2.append(cp1b[i:i+m])   </span><span><span class="n"><a class="indexed_symbol local_indexed_symbol" onclick="parent.postMessage({'referent':'.kaggle.usercode.13188380.48153718.shuffle'}, '*')">清單2.</a></span><span class="n"><a class="indexed_symbol local_indexed_symbol" onclick="parent.postMessage({'referent':'.kaggle.usercode.13188380.48153718.shuffle'}, '*')">附加</a></span><span class="p">(cp1b</span><span class="p">[</span><span class="n"><a class="indexed_symbol local_indexed_symbol" onclick="parent.postMessage({'referent':'.kaggle.usercode.13188380.48153718.i'}, '*')">i</a></span><span class="p">:</span><span class="n"><a class="indexed_symbol local_indexed_symbol" onclick="parent.postMessage({'referent':'.kaggle.usercode.13188380.48153718.i'}, '*')">i</a></span><span class="o">+</span><span class="n"><a class="indexed_symbol local_indexed_symbol" onclick="parent.postMessage({'referent':'.kaggle.usercode.13188380.48153718.m'}, '*')">m</a></span><span class="p">])</span></span><br/><span>print(list2)  </span><span><span class="n"><a class="indexed_symbol local_indexed_symbol" onclick="parent.postMessage({'referent':'.kaggle.usercode.13188380.48153718.shuffle'}, '*')">顯示出來</a></span><span class="n"><a class="indexed_symbol local_indexed_symbol" onclick="parent.postMessage({'referent':'.kaggle.usercode.13188380.48153718.shuffle'}, '*')">（清單2）<br/><br/><br/><br/></a></span></span></pre>
+<br />HW2-1 << <a href='HW2-1.html'>Previous</a> <a href='HW3-1.html'>Next</a> >> HW3-1</div>
+        
+    <!-- footer -->
+      <div class="container">
+        <div class="row pt-3 mx-auto">
+            <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+        </div>
+      </div>
+    <!-- for footer -->
+    
+        </div> <!-- for site wrap -->
+            <!-- <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script> -->
+            <script src="../cmsimde/static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery-ui.js"></script>
+            <script src="../cmsimde/static/chimper/js/popper.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/owl.carousel.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.stellar.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.countdown.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.magnific-popup.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap-datepicker.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/aos.js"></script>
+            <!--
+            <script src="../cmsimde/static/chimper/js/typed.js"></script>
+                    <script>
+                    var typed = new Typed('.typed-words', {
+                    strings: ["Web Apps"," WordPress"," Mobile Apps"],
+                    typeSpeed: 80,
+                    backSpeed: 80,
+                    backDelay: 4000,
+                    startDelay: 1000,
+                    loop: true,
+                    showCursor: true
+                    });
+                    </script>
+            -->
+            <script src="../cmsimde/static/chimper/js/main.js"></script>
+        
+<!-- 啟用 LaTeX equations 編輯 -->
+  <!-- <script>
+  MathJax = {
+    tex: {inlineMath: [['$', '$'], ['\(', '\)']]}
+  };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>-->
+    </body></html>
+        
