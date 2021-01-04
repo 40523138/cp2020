@@ -122,7 +122,7 @@ img.add_border {
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li class='has-children'><a href='About.html'>About</a><ul class='dropdown'><li><a href='Develop.html'>Develop</a></li></ul><li><a href='HW1.html'>HW1</a><li class='has-children'><a href='HW2-1.html'>HW2-1</a><ul class='dropdown'><li><a href='HW2-2.html'>HW2-2</a></li></ul><li class='has-children'><a href='HW3-1.html'>HW3-1</a><ul class='dropdown'><li><a href='HW3-2.html'>HW3-2</a><li><a href='HW3-3.html'>HW3-3</a></li></ul><li><a href='W7.html'>W7</a><li><a href='Note.html'>Note</a><li><a href='心得.html'>心得</a></li>
+                     <li class='has-children'><a href='About.html'>About</a><ul class='dropdown'><li><a href='Develop.html'>Develop</a></li></ul><li><a href='HW1.html'>HW1</a><li class='has-children'><a href='HW2.html'>HW2</a><ul class='dropdown'><li><a href='HW2-1.html'>HW2-1</a></li></ul><li class='has-children'><a href='HW3.html'>HW3</a><ul class='dropdown'><li><a href='HW3-1.html'>HW3-1</a><li><a href='HW3-3.html'>HW3-3</a></li></ul><li><a href='W7.html'>W7</a><li><a href='Note.html'>Note</a><li><a href='心得.html'>心得</a></li>
                       </ul>
                 </nav>
               </div>
@@ -133,23 +133,37 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">HW3-1 << <a href='HW3-1.html'>Previous</a> <a href='HW3-3.html'>Next</a> >> HW3-3<br /><h1>HW3-2</h1>
-<p>Write a program (using functions!) that asks the user for a long string containing multiple words. Print back to the user the same string, except with the words in backwards order. For example, say I type the string:</p>
-<p>  My name is Michele</p>
-<p>Then I would see the string:</p>
-<p>  Michele is name My</p>
-<p>shown back to me.</p>
-<p>編寫一個程序（使用函數！），要求用戶提供包含多個單詞的長字符串。向用戶打印相同的字符串，但單詞順序相反。例如，說我鍵入字符串：</p>
-<p> </p>
-<p>  我叫米歇爾</p>
-<p>然後我會看到字符串：</p>
-<p> </p>
-<p>  米歇爾是我的名字</p>
-<p>顯示給我。</p>
-<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">def reverseWord(w):
-	  return ' '.join(w.split()[::-1])
-</pre>
-<br />HW3-1 << <a href='HW3-1.html'>Previous</a> <a href='HW3-3.html'>Next</a> >> HW3-3</div>
+    <div id="tipue_search_content">HW1 << <a href='HW1.html'>Previous</a> <a href='HW2-1.html'>Next</a> >> HW2-1<br /><h1>HW2</h1>
+<p><span lang="zh-TW"><span>設計一甲</span></span></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import urllib.request
+url = "https://nfulist.herokuapp.com/?semester=1091&amp;courseno=0762"
+cp1a = []
+for line in urllib.request.urlopen(url):
+    cp1a.append(int(line.decode('utf-8').rstrip()))
+print(cp1a)
+print("總共有" + str(len(cp1a)) + " 筆")
+total = len(cp1a)
+for i in range(total):
+    print("http://github.com/" + str(cp1a[i]) + "/cp2020")</pre>
+<p>1. import urllib.request</p>
+<p>    <span class="c1">導入 urllib.request: <a href="https://docs.python.org/3/library/urllib.request.html">https://docs.python.org/3/library/urllib.request.html</a></span></p>
+<p>    並且透過<span class="c1">urllib.request 模組中的 urlopen() 開啟網路 url 連結資料</span></p>
+<p><span class="c1">2. url = "https://nfulist.herokuapp.com/?semester=1091&amp;courseno=0762"</span></p>
+<p><span class="c1">    設定名單的源頭從<a href="https://nfulist.herokuapp.com/?semester=1091&amp;courseno=0762這個網址來">https://nfulist.herokuapp.com/?semester=1091&amp;courseno=0762這個網址來</a></span></p>
+<p><span class="c1">3.cp1a = []</span></p>
+<p><span class="c1">   設定cp1a這個數列</span></p>
+<p><span class="c1">4. for line in urllib.request.urlopen(url):<br/>    cp1a.append(int(line.decode('utf-8').rstrip()))</span></p>
+<p>    透過 urllib.request模組裡的urlopen()取下網際資料但由於資料為binary格式所以必須使用utf-8進行      編碼將它轉換成我們可看得懂的數字</p>
+<p>5. print(cp1a)</p>
+<p>    顯示cp1a , 由於前面有定義數列了所以cp1a的資料將以數列方式呈現</p>
+<p>6. print("總共有" + str(len(cp1a)) + " 筆")</p>
+<p>    顯示 總共有+字串cp1a的資料數+筆</p>
+<p>7. total = len(cp1a)</p>
+<p>    設定total為cp1a資料數</p>
+<p>8. for i in range(total):<br/>    print("http://github.com/" + str(cp1a[i]) + "/cp2020")</p>
+<p>    用迴圈下去跑(total的資料數)相同的次數 </p>
+<p>    並顯示http://github.com/+ cp1a資料裡每個數據 + /cp2020</p>
+<br />HW1 << <a href='HW1.html'>Previous</a> <a href='HW2-1.html'>Next</a> >> HW2-1</div>
         
     <!-- footer -->
       <div class="container">

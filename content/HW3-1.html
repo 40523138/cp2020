@@ -122,7 +122,7 @@ img.add_border {
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li class='has-children'><a href='About.html'>About</a><ul class='dropdown'><li><a href='Develop.html'>Develop</a></li></ul><li><a href='HW1.html'>HW1</a><li class='has-children'><a href='HW2-1.html'>HW2-1</a><ul class='dropdown'><li><a href='HW2-2.html'>HW2-2</a></li></ul><li class='has-children'><a href='HW3-1.html'>HW3-1</a><ul class='dropdown'><li><a href='HW3-2.html'>HW3-2</a><li><a href='HW3-3.html'>HW3-3</a></li></ul><li><a href='W7.html'>W7</a><li><a href='Note.html'>Note</a><li><a href='心得.html'>心得</a></li>
+                     <li class='has-children'><a href='About.html'>About</a><ul class='dropdown'><li><a href='Develop.html'>Develop</a></li></ul><li><a href='HW1.html'>HW1</a><li class='has-children'><a href='HW2.html'>HW2</a><ul class='dropdown'><li><a href='HW2-1.html'>HW2-1</a></li></ul><li class='has-children'><a href='HW3.html'>HW3</a><ul class='dropdown'><li><a href='HW3-1.html'>HW3-1</a><li><a href='HW3-3.html'>HW3-3</a></li></ul><li><a href='W7.html'>W7</a><li><a href='Note.html'>Note</a><li><a href='心得.html'>心得</a></li>
                       </ul>
                 </nav>
               </div>
@@ -133,35 +133,23 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">HW2-2 << <a href='HW2-2.html'>Previous</a> <a href='HW3-2.html'>Next</a> >> HW3-2<br /><h1>HW3-1</h1>
-<p>Write a program (function!) that takes a list and returns a new list that contains all the elements of the first list minus all the duplicates.</p>
-<p>編寫一個包含一個列表並返回一個新列表的程序（函數！），該列表包含第一個列表的所有元素減去所有重複項。</p>
-<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">	# Exercise 13:
-	# Write a function that takes a list and returns a new list that contains 
-	# all the elements of the first list minus duplicates.
-	
-
-	# this one uses a for loop
-	def dedupe_v1(x):
-	  y = []
-	  for i in x:
-	    if i not in y:
-	      y.append(i)
-	  return y
-	
-
-	#this one uses sets
-	def dedupe_v2(x):
-	    return list(set(x))
-	
-
-	a = [1,2,3,4,3,2,1]
-	print a
-	print dedupe_v1(a)
-	print dedupe_v2(a)
-
+    <div id="tipue_search_content">HW3 << <a href='HW3.html'>Previous</a> <a href='HW3-3.html'>Next</a> >> HW3-3<br /><h1>HW3-1</h1>
+<p>Write a program (using functions!) that asks the user for a long string containing multiple words. Print back to the user the same string, except with the words in backwards order. For example, say I type the string:</p>
+<p>  My name is Michele</p>
+<p>Then I would see the string:</p>
+<p>  Michele is name My</p>
+<p>shown back to me.</p>
+<p>編寫一個程序（使用函數！），要求用戶提供包含多個單詞的長字符串。向用戶打印相同的字符串，但單詞順序相反。例如，說我鍵入字符串：</p>
+<p> </p>
+<p>  我叫米歇爾</p>
+<p>然後我會看到字符串：</p>
+<p> </p>
+<p>  米歇爾是我的名字</p>
+<p>顯示給我。</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">def reverseWord(w):
+	  return ' '.join(w.split()[::-1])
 </pre>
-<br />HW2-2 << <a href='HW2-2.html'>Previous</a> <a href='HW3-2.html'>Next</a> >> HW3-2</div>
+<br />HW3 << <a href='HW3.html'>Previous</a> <a href='HW3-3.html'>Next</a> >> HW3-3</div>
         
     <!-- footer -->
       <div class="container">
